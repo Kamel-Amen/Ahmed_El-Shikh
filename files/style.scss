@@ -1,0 +1,681 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
+//font-family: 'El Messiri', sans-serif;
+//font-family: 'Rakkas', cursive;
+//font-family: 'Reem Kufi', sans-serif;
+//font-family: 'Cairo', sans-serif;
+//font-family: 'Londrina Solid', cursive;
+/* Imports */
+
+/* Start Variables */
+$black: #000;
+$white: #fff;
+$yellow: #f7d21a;
+$pink: #ed6f62;
+$blue: #58befe;
+$latae: #eae1ce;
+/* End Variables */
+
+/* Start Default */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  font-family: 'Cairo', sans-serif !important;
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+/* End Default */
+
+/* Start Navbar */
+.navbar {
+  z-index: 9999;
+  .container {
+    .navbar-brand {
+      i {
+        font-size: 2.3rem;
+      }
+      span {
+        font-size: 1.4rem;
+        font-family: 'Reem Kufi', sans-serif;
+      }
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        li {
+          margin-right: 2rem;
+          a {
+            font-size: 1.1rem;
+            color: #ddd;
+            transition: all 0.2s ease-in-out;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            &:hover {
+              transform: scale(1.1);
+              -webkit-transform: scale(1.1);
+              -moz-transform: scale(1.1);
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* End Navbar */
+
+/* Start Homepage */
+.homepage {
+  height: 43rem;
+  .content:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background: #ccc url('../assets/cover.jpg') no-repeat center;
+    background-size: cover;
+    filter: blur(3px) brightness(75%);
+    -webkit-filter: blur(3px) brightness(75%);
+    width: 100%;
+    height: 100%;
+    content: '';
+  }
+  .content {
+    z-index: 10;
+    .info {
+      header {
+        font-size: 3rem;
+        i {
+          font-size: 4rem;
+        }
+        span {
+          font-family: 'Reem Kufi', sans-serif;
+          font-size: 3.2rem;
+          text-shadow: 1px 1px 1px $black;
+        }
+      }
+      p {
+        margin: 2rem auto;
+        font-size: 1.5rem;
+      }
+      .btn-new {
+        padding: 10px 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+      }
+      .btn-hover {
+        border: 2px solid rgb(255, 255, 255);
+        z-index: 1;
+        color: $white;
+        &:hover {
+          color: rgb(0, 0, 0);
+        }
+        &::after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 0;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          background: $white;
+          transition: all 0.3s ease;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+        }
+      }
+      .btn-hover:hover:after {
+        top: auto;
+        bottom: 0;
+        height: 100%;
+      }
+    }
+  }
+}
+/* End Homepage */
+
+/* Start AboutUs */
+.aboutUs {
+  .product-1,
+  .product-2,
+  .product-3 {
+    .info {
+      width: 75%;
+      margin: 2rem auto 0;
+    }
+    #sec-aboutMe {
+      .svg {
+        bottom: 0;
+        left: 0;
+      }
+    }
+    .pro-img {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .bn13 {
+    width: 10rem;
+    padding: 0.65em 1.6em;
+    border: 3px solid $black;
+    border-radius: 1em;
+    font-size: 1.2rem;
+    font-family: 'El Messiri', sans-serif;
+    transition: all 0.2s;
+    animation: bn13bouncy 5s infinite linear;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-animation: bn13bouncy 5s infinite linear;
+  }
+  .hover-1:hover {
+    background-color: $yellow;
+    border-color: $yellow;
+  }
+  .hover-2:hover {
+    background-color: $pink;
+    border-color: $pink;
+  }
+  .hover-3:hover {
+    background-color: $blue;
+    border-color: $blue;
+  }
+  .product-1 {
+    .info {
+      font-size: 1.5rem;
+      #sp-1,
+      #sp-2 {
+        font-size: 2rem;
+        font-family: 'Reem Kufi', sans-serif;
+      }
+    }
+    .pro-img {
+      background-color: $yellow;
+    }
+  }
+  .product-2 {
+    .info {
+      #sp-1 {
+        font-size: 1.5rem;
+      }
+    }
+    .pro-img {
+      background-color: $pink;
+    }
+  }
+  .product-3 {
+    .info {
+      font-size: 2rem;
+      #sp-2 {
+        font-size: 2.5rem;
+        font-family: 'Reem Kufi', sans-serif;
+      }
+    }
+    .pro-img {
+      background-color: $blue;
+    }
+  }
+
+  /* Start Props */
+  .props {
+    height: 42rem;
+    .content:before {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      display: block;
+      background: #ccc url('../assets/cover\ 2.jpg') no-repeat center;
+      background-size: cover;
+      filter: blur(3px) brightness(50%);
+      -webkit-filter: blur(3px) brightness(50%);
+      width: 100%;
+      height: 100%;
+      content: '';
+    }
+    .content {
+      z-index: 10;
+      #main-header {
+        font-family: 'El Messiri', sans-serif;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 2px $black;
+        width: 12rem;
+        &::before,
+        &::after {
+          height: 0.25rem;
+          right: 0;
+          content: '';
+          display: block;
+          background-color: $white;
+          position: absolute;
+        }
+        &::before {
+          width: 3rem;
+          bottom: -1rem;
+        }
+        &::after {
+          width: 6rem;
+          bottom: -1.75rem;
+        }
+      }
+      .props-content {
+        margin-top: 7rem;
+        .props-item {
+          .card {
+            .card-header {
+              background-color: #ddd;
+            }
+            .card-body {
+              background-color: #eee;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* End AboutUs */
+
+/* Start Products */
+.products {
+  margin-bottom: 10rem;
+  header {
+    font-family: 'El Messiri', sans-serif;
+    font-size: 3rem;
+    text-shadow: 0.2px 0.2px 0.2px $black;
+    width: 20rem;
+    &::before,
+    &::after {
+      height: 0.25rem;
+      right: 0;
+      content: '';
+      display: block;
+      background-color: #666;
+      position: absolute;
+    }
+    &::before {
+      width: 3rem;
+      bottom: -1rem;
+    }
+    &::after {
+      width: 6rem;
+      bottom: -1.75rem;
+    }
+  }
+  .carousel {
+    margin-top: 5rem;
+    height: 35rem;
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+}
+/* End Products */
+
+/* Start ContactUs */
+.contactUs {
+  height: 15rem;
+  background-color: #4699fe;
+  svg {
+    top: -10rem;
+    z-index: -1;
+  }
+  .content {
+    z-index: 11;
+    font-family: 'Londrina Solid', cursive;
+    header {
+      font-size: 3rem;
+      font-family: 'El Messiri', sans-serif;
+    }
+    a {
+      margin-top: 2.5rem;
+      font-size: 2rem;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+      }
+    }
+  }
+}
+/* End ContactUs */
+
+/* Start Footer */
+.footer {
+  height: 4.2rem;
+  background-color: $black;
+  .content {
+    .icons {
+      a {
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        font-size: 1.4rem;
+      }
+      a:hover {
+        transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        -moz-transform: translateY(-5px);
+      }
+    }
+  }
+}
+/* End Footer */
+
+/* Start Keyframes */
+@keyframes bn13bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+/* End Keyframes */
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  /* Start Homepage */
+  .homepage {
+    height: 32rem;
+    .content {
+      .info {
+        header {
+          font-size: 2rem;
+          i {
+            font-size: 3rem;
+          }
+          span {
+            font-size: 3rem;
+          }
+        }
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  /* End Homepage */
+  /* Start AboutUs */
+  .aboutUs {
+    .product-1,
+    .product-2,
+    .product-3 {
+      .pro-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 75%;
+        }
+      }
+    }
+    .product-1 {
+      .info {
+        font-size: 1.2rem;
+        width: 100%;
+        #sp-1,
+        #sp-2 {
+          font-size: 2rem;
+        }
+      }
+    }
+    .product-2 {
+      .info {
+        #sp-1 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .product-3 {
+      .info {
+        font-size: 1.5rem;
+        #sp-2 {
+          font-size: 2rem;
+        }
+      }
+    }
+    /* Start Props */
+    .props {
+      height: 35rem;
+    }
+  }
+  /* End AboutUs */
+  /* Start Products */
+  .products {
+    .carousel {
+      width: 80%;
+      .carousel-inner {
+        margin: 0 auto;
+        width: 80% !important;
+        height: 75% !important;
+        .carousel-item {
+          height: 100% !important;
+          width: 100% !important;
+          img {
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        margin-top: 27rem !important;
+      }
+    }
+  }
+  /* End Products */
+  /* Start Footer */
+  .footer {
+    height: 4rem;
+    .content {
+      .col-4 {
+        width: 50%;
+        font-size: 0.9rem !important;
+      }
+      .icons {
+        a {
+          width: 1rem !important;
+        }
+      }
+    }
+  }
+  /* End Footer */
+}
+
+@media screen and (max-width: 425px) {
+  /* Start Homepage */
+  .homepage {
+    height: 40rem;
+    .content {
+      .info {
+        header {
+          font-size: 1.6rem;
+          margin-top: 2rem;
+          i {
+            font-size: 2.5rem;
+          }
+          span {
+            display: inline-block;
+            font-size: 2.5rem;
+          }
+        }
+        p {
+          font-size: 1.2rem;
+        }
+        .btn-new {
+          width: 75%;
+        }
+        .btn-new:last-of-type {
+          margin: 2rem 0 0 1.5rem;
+        }
+      }
+    }
+  }
+  /* End Homepage */
+  /* Start AboutUs */
+  .aboutUs {
+    .product-1,
+    .product-2,
+    .product-3 {
+      .col-6 {
+        width: 100%;
+      }
+      .info {
+        width: 100%;
+        margin: 0.75rem auto 0;
+      }
+    }
+    .product-1 {
+      .info {
+        font-size: 1.2rem;
+        #sp-1,
+        #sp-2 {
+          font-size: 1.7rem;
+        }
+      }
+    }
+    .product-2 {
+      .info {
+        #sp-1 {
+          font-size: 1.3rem;
+        }
+      }
+    }
+    .product-3 {
+      .info {
+        font-size: 1.6rem;
+        #sp-2 {
+          font-size: 2.1rem;
+        }
+      }
+    }
+    /* Start Props */
+    .props {
+      height: 65rem;
+      .content {
+        .props-content {
+          display: block !important;
+          width: 100% !important;
+          .props-item {
+            display: block !important;
+            width: 90% !important;
+            margin: 3rem auto 0;
+          }
+        }
+      }
+    }
+  }
+  /* End AboutUs */
+  /* Start Products */
+  .products {
+    margin-bottom: 0;
+    header {
+      font-size: 2.2rem;
+    }
+    .carousel {
+      .carousel-inner {
+        .carousel-item {
+          height: 50% !important;
+          img {
+            width: 100% !important;
+            height: 100% !important;
+          }
+        }
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 4rem;
+        height: 4rem;
+        margin-top: 18rem !important;
+      }
+    }
+  }
+  /* End Products */
+  /* Start ContactUs */
+  .contactUs {
+    height: 25rem;
+    svg {
+      top: -4rem;
+    }
+    .content {
+      header {
+        text-shadow: 1px 1px 1px $black;
+      }
+      a {
+        margin-top: 1.5rem;
+        &:hover {
+          transform: translateY(-10px) scale(1.1);
+          -webkit-transform: translateY(-10px) scale(1.1);
+          -moz-transform: translateY(-10px) scale(1.1);
+          color: $black !important;
+        }
+      }
+    }
+  }
+  /* End ContactUs */
+  /* Start Footer */
+  .footer {
+    height: 9rem;
+    .content {
+      .col-5,
+      .col-4 {
+        width: 100%;
+      }
+      .icons {
+        text-align: center;
+        a {
+          display: inline-block;
+          width: 3.22rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  /* End Footer */
+}
+/* End MediaQueries */
